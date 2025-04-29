@@ -7,7 +7,7 @@ public class CreditCard extends Card {
 
     @Override
     public double getInterestRate() {
-        double rate = 10.0;
+        double rate = 15.0; // Credit cards typically have a higher interest rate
         System.out.println("The interest rate is " + rate + "%");
         return rate;
     }

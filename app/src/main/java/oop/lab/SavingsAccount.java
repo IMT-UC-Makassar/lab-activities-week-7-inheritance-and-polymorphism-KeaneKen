@@ -6,9 +6,13 @@ public class SavingsAccount extends BankAccount implements OnlineService {
     }
 
     @Override
-    public void transferFunds(double amount, String nama) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'transferfunds'");
+    public void transferFunds(double amount, String accountNumber) {
+        if (getBalance() >= amount) {
+            withdraw(amount);
+            System.out.println("Transferred $" + amount + " to account " + accountNumber);
+        } else {
+            System.out.println("Insufficient funds for transfer.");
+        }
     }
 
     @Override
@@ -19,6 +23,8 @@ public class SavingsAccount extends BankAccount implements OnlineService {
 
     @Override
     public double calculateInterest() {
-        return getBalance() * 100.0;
+        double interest = getBalance() * 0.05; // 5% interest
+        deposit(interest); // Add interest to balance
+        return interest;
     }
 }

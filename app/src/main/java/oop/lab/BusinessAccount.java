@@ -7,7 +7,9 @@ public class BusinessAccount extends BankAccount implements OnlineService, LoanS
 
     @Override
     public double calculateInterest() {
-        return getBalance() * 10.0;
+        double interest = getBalance() * 0.1; // 10% interest
+        deposit(interest); // Add interest to balance
+        return interest;
     }
 
     @Override

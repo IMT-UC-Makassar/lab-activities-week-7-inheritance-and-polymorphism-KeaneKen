@@ -7,7 +7,7 @@ public class DebitCard extends Card {
 
     @Override
     public double getInterestRate() {
-        double rate = 10.0;
+        double rate = 0.0; // Debit cards typically have no interest rate
         System.out.println("The interest rate is " + rate + "%");
         return rate;
     }

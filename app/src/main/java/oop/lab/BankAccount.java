@@ -21,7 +21,7 @@ public abstract class BankAccount {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
         } else {
-            System.out.println("Invalid withdrawal amount.");
+            throw new IllegalArgumentException("Insufficient funds");
         }
     }
     public double  getBalance(){
