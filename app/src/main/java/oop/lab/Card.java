@@ -9,6 +9,7 @@ public class Card {
         this.cardHolder = cardHolder;
     }
 
+    
     public double getInterestRate (){
         double rate = 10.0;
         System.out.println("The interest rate is " + rate + "%");
